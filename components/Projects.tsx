@@ -1,60 +1,138 @@
-import { BsArrowUpRight} from 'react-icons/bs'
-import Image from 'next/image';
-import Link from 'next/link';
-
+"use client";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 type Props = {};
+const titleAnimation = {
+  hidden: {
+    y: -100,
+    opacity: 0,
+  },
+  visible: (custom) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: 0.2 },
+  }),
+};
 const Projects = (props: Props) => {
-   
-
-    return <div className='w-10/12 mx-auto'>
-        <h1 className='md:text-4xl text-3xl lg:text-5xl font-bold'>Projects</h1>
-        <p className='pt-6 text-neutral-300'>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis architecto obcaecati porro quas quae repellendus fugit. Quam dolore vel nam tempora reiciendis quas, at voluptatum numquam sint temporibus repellat suscipit!
-        </p>
-        <div className='mt-20 md:w-9/12 mx-auto'>
-            <Image className='rounded-xl opacity-95 hover:opacity-100' src='/calendar.png' alt='Project' width={1200} height={400}/>
-            <div className='my-10 sm:w-10/12 mx-auto'>
-                <h2 className='text-2xl font-bold mb-4'>Calendar</h2>
-                <p className = 'text-neutral-300'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero veniam, alias repellat quos vel soluta impedit molestiae! In laudantium repellat dignissimos, assumenda molestiae consectetur beatae possimus illo, nemo, dolore aperiam?</p>
-                <div className='mt-6 inline-block'>
-                    <Link href={'#'} className='flex items-center px-4 py-1 border-[0.5px] border-slate-500 rounded-3xl bg-neutral-800 hover:bg-neutral-600'>
-                        Exlore
-                        <BsArrowUpRight size={14} className='ml-2'/>
-                    </Link>
-                </div>
-            </div>
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.1 }}
+      className="w-10/12 mx-auto mt-10"
+    >
+      <motion.h2
+        variants={titleAnimation}
+        className="md:text-4xl text-3xl lg:text-5xl font-bold"
+      >
+        Projects
+      </motion.h2>
+      <p className="pt-6 text-neutral-300">
+        Over the years, I have gained experience in designing and developing a
+        variety of websites, ranging from simple one-page landing pages to
+        complex multi-page applications.Here are some projects that I would like
+        to present to all of you, showcasing my work and achievements in the
+        field of web design and development.
+      </p>
+      <div className="mt-20 md:w-9/12 mx-auto">
+        <Image
+          className="rounded-xl opacity-90 mx-auto"
+          src="/calendar.png"
+          alt="calendar"
+          width={700}
+          height={700}
+        />
+        <div className="my-10 sm:w-10/12 mx-auto">
+          <h1 className="text-2xl font-bold mb-4 text-center">Calendar</h1>
+          <div className="text-neutral-300 text-center">
+            Данный проект разработан с использованием React и TailWind. Он
+            предоставляет пользователю возможность просматривать и управлять
+            событиями в календаре.
+          </div>
+          <div className="mt-6 inline-block flex gap-2 justify-center">
+            <Link
+              href="https://calendar-react-six.vercel.app/"
+              className="flex items-center px-4 py-1 border-[0.5px] border-slate-500 rounded-3xl bg-neutral-800 hover:bg-neutral-700"
+            >
+              Explore <BsArrowUpRight size={14} className="ml-2" />
+            </Link>
+            <Link
+              href="https://github.com/GrudTrigger/Personal-Calendar-React"
+              className="flex items-center px-4 py-1 border-[0.5px] border-slate-500 rounded-3xl bg-neutral-800 hover:bg-neutral-700"
+            >
+              GitHub <BsGithub size={14} className="ml-2" />
+            </Link>
+          </div>
         </div>
 
-        <div className='mt-20 md:w-9/12 mx-auto'>
-            <Image className='rounded-xl opacity-95 hover:opacity-100' src='/crm.png' alt='Project' width={1200} height={400}/>
-            <div className='my-10 sm:w-10/12 mx-auto'>
-                <h2 className='text-2xl font-bold mb-4'>Mini CRM</h2>
-                <p className = 'text-neutral-300'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero veniam, alias repellat quos vel soluta impedit molestiae! In laudantium repellat dignissimos, assumenda molestiae consectetur beatae possimus illo, nemo, dolore aperiam?</p>
-                <div className='mt-6 inline-block'>
-                    <Link href={'#'} className='flex items-center px-4 py-1 border-[0.5px] border-slate-500 rounded-3xl bg-neutral-800 hover:bg-neutral-600'>
-                        Exlore
-                        <BsArrowUpRight size={14} className='ml-2'/>
-                    </Link>
-                </div>
-            </div>
+        <div className="h-2px border border-white w-1/3 mx-auto"></div>
+      </div>
+      <div className="mt-20 md:w-9/12 mx-auto">
+        <Image
+          className="rounded-xl opacity-90 mx-auto"
+          src="/crm.png"
+          alt="crm"
+          width={700}
+          height={700}
+        />
+        <div className="my-10 sm:w-10/12 mx-auto">
+          <h1 className="text-2xl font-bold mb-4 text-center">Mini CRM</h1>
+          <div className="text-neutral-300 text-center">
+            A landing page for designers made with basic html, css with great
+            color combination.
+          </div>
+          <div className="mt-6 inline-block flex gap-2 justify-center">
+            <Link
+              href="https://crm-psi-jade.vercel.app/"
+              className="flex items-center px-4 py-1 border-[0.5px] border-slate-500 rounded-3xl bg-neutral-800 hover:bg-neutral-700"
+            >
+              Explore <BsArrowUpRight size={14} className="ml-2" />
+            </Link>
+            <Link
+              href="https://github.com/GrudTrigger/CRM"
+              className="flex items-center px-4 py-1 border-[0.5px] border-slate-500 rounded-3xl bg-neutral-800 hover:bg-neutral-700"
+            >
+              GitHub <BsGithub size={14} className="ml-2" />
+            </Link>
+          </div>
         </div>
 
-        <div className='mt-20 md:w-9/12 mx-auto'>
-            <Image className='rounded-xl opacity-95 hover:opacity-100' src='/calendar.png' alt='Project' width={1200} height={400}/>
-            <div className='my-10 sm:w-10/12 mx-auto'>
-                <h2 className='text-2xl font-bold mb-4'>Films</h2>
-                <p className = 'text-neutral-300'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero veniam, alias repellat quos vel soluta impedit molestiae! In laudantium repellat dignissimos, assumenda molestiae consectetur beatae possimus illo, nemo, dolore aperiam?</p>
-                <div className='mt-6 inline-block'>
-                    <Link href={'#'} className='flex items-center px-4 py-1 border-[0.5px] border-slate-500 rounded-3xl bg-neutral-800 hover:bg-neutral-600'>
-                        Exlore
-                        <BsArrowUpRight size={14} className='ml-2'/>
-                    </Link>
-                </div>
-            </div>
+        <div className="h-2px border border-white w-1/3 mx-auto"></div>
+      </div>{" "}
+      <div className="mt-20 md:w-9/12 mx-auto">
+        <Image
+          className="rounded-xl opacity-90 mx-auto"
+          src="/calendar.png"
+          alt="calendar"
+          width={700}
+          height={700}
+        />
+        <div className="my-10 sm:w-10/12 mx-auto">
+          <h1 className="text-2xl font-bold mb-4 text-center">Films</h1>
+          <div className="text-neutral-300 text-center">
+            A landing page for designers made with basic html, css with great
+            color combination.
+          </div>
+          <div className="mt-6 inline-block flex gap-2 justify-center">
+            <Link
+              href=""
+              className="flex items-center px-4 py-1 border-[0.5px] border-slate-500 rounded-3xl bg-neutral-800 hover:bg-neutral-700"
+            >
+              Explore <BsArrowUpRight size={14} className="ml-2" />
+            </Link>
+            <Link
+              href=""
+              className="flex items-center px-4 py-1 border-[0.5px] border-slate-500 rounded-3xl bg-neutral-800 hover:bg-neutral-700"
+            >
+              GitHub <BsGithub size={14} className="ml-2" />
+            </Link>
+          </div>
         </div>
-    </div>
+      </div>
+    </motion.div>
+  );
+};
 
-}
-
-
-export default Projects
+export default Projects;
