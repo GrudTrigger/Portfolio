@@ -8,7 +8,7 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   const [showNav, setShowNav] = useState<boolean>(false);
-  // Поставить якори на сплошную линию, чтобы перемещатся в начало сеции
+
   return (
     <div className="flex items-center justify-between flex-nowrap w-full pb-3 border-b-[1px] border-neutral-500">
       <div className="sm:text-3xl text-xl font-bold inline-block">
@@ -21,7 +21,9 @@ const Navbar = (props: Props) => {
       </div>
       <nav
         className={`max-sm:absolute max-sm:w-full left-0 transition ease-in duration-300 ${
-          showNav ? "top-16 visible" : "max-sm:invisible top-0"
+          showNav
+            ? "top-16 visible overflow-x-hidden"
+            : "max-sm:invisible top-0 overflow-x-auto"
         }`}
       >
         <ul className="flex items-center max-sm:text-sm justify-between max-sm:justify-around">

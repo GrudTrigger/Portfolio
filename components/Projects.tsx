@@ -9,18 +9,19 @@ const titleAnimation = {
     y: -100,
     opacity: 0,
   },
-  visible: (custom) => ({
+  visible: {
     y: 0,
     opacity: 1,
     transition: { delay: 0.2 },
-  }),
+  },
 };
+
 const Projects = (props: Props) => {
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.1 }}
+      viewport={{ amount: 0.1, once: true }}
       className="w-10/12 mx-auto mt-10"
     >
       <motion.h2
@@ -29,14 +30,7 @@ const Projects = (props: Props) => {
       >
         Projects
       </motion.h2>
-      <p className="pt-6 text-neutral-300">
-        Over the years, I have gained experience in designing and developing a
-        variety of websites, ranging from simple one-page landing pages to
-        complex multi-page applications.Here are some projects that I would like
-        to present to all of you, showcasing my work and achievements in the
-        field of web design and development.
-      </p>
-      <div className="mt-20 md:w-9/12 mx-auto">
+      <div className="mt-20 md:w-9/12 mx-auto max-sm:mt-10">
         <Image
           className="rounded-xl opacity-90 mx-auto"
           src="/calendar.png"
@@ -100,7 +94,7 @@ const Projects = (props: Props) => {
         </div>
 
         <div className="h-2px border border-white w-1/3 mx-auto"></div>
-      </div>{" "}
+      </div>
       <div className="mt-20 md:w-9/12 mx-auto">
         <Image
           className="rounded-xl opacity-90 mx-auto"

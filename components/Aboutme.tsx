@@ -33,15 +33,15 @@ const AboutMe = () => {
     >
       <motion.h2
         variants={titleAnimation}
-        className="md:text-4xl text-3xl lg:text-5xl font-bold mb-10"
+        className="md:text-4xl text-3xl lg:text-5xl font-bold mb-10 max-sm:mb-2"
       >
         About me
       </motion.h2>
       <motion.div variants={blockAnimation} className="flex msx-md:flex-wrap">
-        <div className="d p-5 overflow-hidden mt-5 w-2/3 mx-auto">
-          <p className="text-left mt-5 text-sm">
+        <div className="d p-5 overflow-hidden mt-5 w-2/3 mx-auto max-sm:w-[100%] max-sm:py-2 md:w-[100%] max-md:py-2">
+          <p className="text-left mt-5 text-base">
             Добрый день! Меня зовут Георгий, и я начинающий
-            <strong>Frontend - разработчик</strong>. Мой путь в разработке
+            <strong> Frontend - разработчик</strong>. Мой путь в разработке
             начался, когда я поступил в инстутит, где учусь по специальности
             "Бизнес информатика". За это время я познакомился с такими
             технологиями как HTML, CSS и JavaScript, и увлекся созданием

@@ -11,11 +11,20 @@ export default function Home() {
         <Navbar />
       </div>
       <Container />
-      <div className="border-t-2 w-10/12 mx-auto mt-10" id="about"></div>
+      <div
+        className="border-t-2 w-10/12 mx-auto mt-10 max-sm:w-3/4"
+        id="about"
+      ></div>
       <AboutMe />
-      <div className="border-t-2 w-10/12 mx-auto mt-10" id="skills"></div>
+      <div
+        className="border-t-2 w-10/12 mx-auto mt-10 max-sm:w-3/4"
+        id="skills"
+      ></div>
       <Skills />
-      <div className="border-t-2 w-10/12 mx-auto mt-10" id="project"></div>
+      <div
+        className="border-t-2 w-10/12 mx-auto mt-10 max-sm:w-3/4"
+        id="project"
+      ></div>
       <Projects />
     </div>
   );
