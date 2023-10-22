@@ -9,11 +9,11 @@ const titleAnimation = {
     y: -100,
     opacity: 0,
   },
-  visible: (custom) => ({
+  visible: {
     y: 0,
     opacity: 1,
     transition: { delay: 0.2 },
-  }),
+  },
 };
 const skillsAnimation = {
   hidden: {
