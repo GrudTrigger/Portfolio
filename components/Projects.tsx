@@ -74,8 +74,8 @@ const Projects = (props: Props) => {
         <div className="my-10 sm:w-10/12 mx-auto">
           <h1 className="text-2xl font-bold mb-4 text-center">Mini CRM</h1>
           <div className="text-neutral-300 text-center">
-            A landing page for designers made with basic html, css with great
-            color combination.
+            Мини CRM система React + Redux ToolKit, где можно добавлять зайти,
+            фильтровать, и редактировать заявки поступающие в систему
           </div>
           <div className="mt-6 inline-block flex gap-2 justify-center">
             <Link
@@ -98,7 +98,7 @@ const Projects = (props: Props) => {
       <div className="mt-20 md:w-9/12 mx-auto">
         <Image
           className="rounded-xl opacity-90 mx-auto"
-          src="/calendar.png"
+          src="/cinema.png"
           alt="calendar"
           width={700}
           height={700}
@@ -106,8 +106,9 @@ const Projects = (props: Props) => {
         <div className="my-10 sm:w-10/12 mx-auto">
           <h1 className="text-2xl font-bold mb-4 text-center">Films</h1>
           <div className="text-neutral-300 text-center">
-            A landing page for designers made with basic html, css with great
-            color combination.
+            Веб-приложение на Next.js с использованием Clerk Auth,
+            предоставляющее возможность поиска фильмов и сериалов, просмотра
+            трейлеров и добавления их в избранное
           </div>
           <div className="mt-6 inline-block flex gap-2 justify-center">
             <Link
@@ -117,7 +118,7 @@ const Projects = (props: Props) => {
               Explore <BsArrowUpRight size={14} className="ml-2" />
             </Link>
             <Link
-              href=""
+              href="https://github.com/GrudTrigger/CinemaRating"
               className="flex items-center px-4 py-1 border-[0.5px] border-slate-500 rounded-3xl bg-neutral-800 hover:bg-neutral-700"
             >
               GitHub <BsGithub size={14} className="ml-2" />
